@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+<div class="row">
+    <div class="span4">
+    	<h3><%= @post.title %></h3>
+    </div>
+    <div class="span8"><%= @post.content %></div>
+</div>	
+<h3>
+  <%= @post.title %>
+</h3>
+
+  
+
+<h1>Comments</h1>
+<% @post.comments.each do |comment| %>
+  <p><%= comment.text %></p>
+  <p><%= time_ago_in_words comment.created_at %></p>
+  <%= link_to 'Delete', [comment.post, comment], :class => 'btn', :method => :delete, :confirm => "Are you sure?"%>
+<% end %>
+<div class="form-actions">
+	<%= form_for [@post, @post.comments.build] do |f| %>
+      <%= f.text_area :text, :size => '40*10' %>
+  
+      <%= f.submit "Post comment", :class => 'btn btn-large btn-primary' %>
+    <% end %>
+</div>
+
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>|
+<%= link_to 'Delete', @post, :method => :delete, :confirm => "Are you sure?" %>

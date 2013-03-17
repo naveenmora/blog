@@ -1,4 +1,13 @@
 Blog::Application.routes.draw do
+  get "comments/create"
+
+  get "comments/destroy"
+
+  resources :posts do 
+    resources :comments
+  end  
+
+
   get "home/index"
 
   #get "home/–no-controller-specs"
@@ -54,7 +63,7 @@ Blog::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'home#index'
+  root :to => 'posts#index'
 
   # See how all your routes lay out with "rake routes"
 
