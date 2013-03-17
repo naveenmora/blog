@@ -1,17 +1,11 @@
 <p id="notice"><%= notice %></p>
-<div class="row">
-    <div class="span4">
-    	<h3><%= @post.title %></h3>
-    </div>
-    <div class="span8"><%= @post.content %></div>
-</div>	
-<h3>
-  <%= @post.title %>
-</h3>
 
+
+  <h3><%= @post.title %></h3>
+  <%= @post.content %>
   
 
-<h1>Comments</h1>
+<h3>Comments</h3>
 <% @post.comments.each do |comment| %>
   <p><%= comment.text %></p>
   <p><%= time_ago_in_words comment.created_at %></p>

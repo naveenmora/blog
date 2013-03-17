@@ -1,8 +1,11 @@
 <h1> Wel come to my Blog</h1>
 <% @posts.each do |post| %>
-  <h2><%= link_to post.title, post %></h2>
-  <p><%= time_ago_in_words post.created_at %> ago</p>
-  <p><%= truncate post.content %></p>
+<div class="post_box">
+	<div class="post_title"><%= link_to post.title, post %></div>
+	<div><%= link_to "View", post, :class => "btn btn-primary", :id => "post_btn"%></div><br />
+	<p><%= truncate post.content %></p>
+	<p><%= time_ago_in_words post.created_at %> ago</p>
+</div>
 <% end %>
 
 <%= link_to 'New Post', new_post_path %>

@@ -32,3 +32,20 @@ border: solid 1px #6C6;
 background-color: #FCC;
 border: solid 1px #C66;
 }
+.post_box{
+	border: 1px solid;
+	border-radius: 5px;
+	margin-top: 10px;
+	padding: 5px;
+}
+.post_title{
+	color: blue;
+	float: left;
+	position: relative;
+}
+#post_btn{
+	position: relative;
+	float: right;
+	margin-top: 10px;
+	margin-right: 10px;
+}

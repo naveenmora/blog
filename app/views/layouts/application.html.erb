@@ -37,16 +37,17 @@
   <body>
 
     <div class="navbar navbar-fixed-top">
-      <div class="navbar navbar-inverse">
+      <div class="navbar-inner">
         <div class="container">
           <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">Blog</a>
+          <a class="brand" href="/posts/">Blog</a>
           <div class="container nav-collapse">
             <ul class="nav">
+              <%= render "shared/navigation" %>
               <li><%#= link_to "Link1", "/path1"  %></li>
               <li><%#= link_to "Link2", "/path2"  %></li>
               <li><%#= link_to "Link3", "/path3"  %></li>
@@ -62,9 +63,8 @@
             <%= bootstrap_flash %>
             <div class="hero-unit">
             <%= yield %>
-            </div>
           </div>
-          
+          </div>
         </div><!--/row-->
 
       <footer>
