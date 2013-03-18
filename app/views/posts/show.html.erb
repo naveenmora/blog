@@ -1,15 +1,17 @@
 <p id="notice"><%= notice %></p>
 
 
-  <h3><%= @post.title %></h3>
+  <div class="heading"><%= @post.title %></div>
   <%= @post.content %>
   
 
 <h3>Comments</h3>
 <% @post.comments.each do |comment| %>
-  <p><%= comment.text %></p>
+<div class="post_box">
+  <div class="comment_color"><%= comment.text %></div>
   <p><%= time_ago_in_words comment.created_at %></p>
-  <%= link_to 'Delete', [comment.post, comment], :class => 'btn', :method => :delete, :confirm => "Are you sure?"%>
+  <%= link_to 'Delete', [comment.post, comment], :class => 'btn', :method => :delete, :confirm => "Are you sure?", :id => "comment_btn" %>
+</div>  
 <% end %>
 <div class="form-actions">
 	<%= form_for [@post, @post.comments.build] do |f| %>

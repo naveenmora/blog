@@ -1,7 +1,7 @@
 <h1> Wel come to my Blog</h1>
 <% @posts.each do |post| %>
 <div class="post_box">
-	<div class="post_title"><%= link_to post.title, post %></div>
+	<div class="post_title"><%= link_to post.title, post, :class => "red" %></div>
 	<div><%= link_to "View", post, :class => "btn btn-primary", :id => "post_btn"%></div><br />
 	<p><%= truncate post.content %></p>
 	<p><%= time_ago_in_words post.created_at %> ago</p>

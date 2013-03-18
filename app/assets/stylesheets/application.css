@@ -39,7 +39,7 @@ border: solid 1px #C66;
 	padding: 5px;
 }
 .post_title{
-	color: blue;
+	color: 'red';
 	float: left;
 	position: relative;
 }
@@ -48,4 +48,23 @@ border: solid 1px #C66;
 	float: right;
 	margin-top: 10px;
 	margin-right: 10px;
+}
+#comment_btn{
+	float: right;
+    margin-right: 10px;
+    margin-top: -50px;
+    position: relative;
+}
+.comment_color{
+	color: #00f;
+	font-size: 30px;
+
+}
+.red a{
+	color: #f00;
+}
+.heading{
+	color: #23f;
+	text-transform: capitalize;
+	font-size: 30px;
 }
