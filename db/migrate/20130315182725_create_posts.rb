@@ -6,5 +6,6 @@ class CreatePosts < ActiveRecord::Migration
 
       t.timestamps
     end
+    say "Created a table"
   end
 end

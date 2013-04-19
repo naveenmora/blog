@@ -7,4 +7,5 @@ class CreateComments < ActiveRecord::Migration
       t.timestamps
     end
   end
+  say "Thank you"
 end

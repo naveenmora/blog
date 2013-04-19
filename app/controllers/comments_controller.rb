@@ -4,8 +4,8 @@ class CommentsController < ApplicationController
 	# raise params[:comment][:text].inspect
   	@comment = @post.comments.build(params[:comment])
   	# raise params[:comment][:text].inspect
-
-  	@comment.save
+    @comment.save
+  	
 
   	redirect_to @post
   end
